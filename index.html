@@ -59,14 +59,17 @@
         .list-item-title {
             font-size: 1.25rem;
             font-weight: 600;
-            color: #fff; /* Títulos de lista brancos */
+            color: #fff;
         }
         .list-item-text {
             font-size: 1rem;
             color: #d1d5db;
         }
         .highlight {
-            color: #ffd700; /* Dourado para destaque */
+            color: #ffd700;
+        }
+        .chat-minimized {
+            display: none;
         }
     </style>
 </head>
@@ -196,7 +199,16 @@
         </div>
     </div>
     
-    <div id="chat-container" class="fixed right-4 bottom-4 w-11/12 max-w-sm md:max-w-md bg-gray-800 rounded-2xl shadow-xl flex flex-col overflow-hidden transform scale-95 md:scale-100">
+    <div id="open-chat-btn" class="fixed right-4 bottom-4 cursor-pointer z-50">
+        <button class="bg-yellow-500 text-black p-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 10.5h.008v.008h-.008v-.008zm.008 5.25h.008v.008h-.008v-.008zm1.314-8.175a.75.75 0 111.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zM9.75 9.75h-.008v.008h.008v-.008zm.008 5.25h.008v.008h-.008v-.008zm1.314-8.175a.75.75 0 111.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zM9.75 9.75h-.008v.008h.008v-.008zm.008 5.25h.008v.008h-.008v-.008zm1.314-8.175a.75.75 0 111.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 10.5h.008v.008h-.008v-.008zm.008 5.25h.008v.008h-.008v-.008zm1.314-8.175a.75.75 0 111.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l-1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06zm-1.06-1.06a.75.75 0 11-1.06 1.06l1.06-1.06zm-1.06 1.06a.75.75 0 11-1.06-1.06l1.06 1.06z" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="chat-container" class="fixed right-4 bottom-24 w-11/12 max-w-sm md:max-w-md bg-gray-800 rounded-2xl shadow-xl flex flex-col overflow-hidden transform scale-95 md:scale-100">
         <div class="bg-yellow-500 text-black p-4 rounded-t-2xl flex justify-between items-center">
             <h3 class="text-lg font-bold">Assistente da Sansão Fight Team ✨</h3>
             <button id="close-chat-btn" class="text-xl font-bold text-black">&times;</button>
@@ -219,6 +231,7 @@
     </div>
 
     <script>
+        // Funções para o Modal de Contato
         function showModal() {
             document.getElementById('contactModal').style.display = 'flex';
         }
@@ -234,17 +247,19 @@
             }
         }
         
+        // Funções para o Chatbot
+        const openChatBtn = document.getElementById('open-chat-btn');
         const userInput = document.getElementById('user-input');
         const sendBtn = document.getElementById('send-btn');
         const chatBox = document.getElementById('chat-box');
         const chatContainer = document.getElementById('chat-container');
         const closeChatBtn = document.getElementById('close-chat-btn');
         const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
-        const apiKey = 'AIzaSyDWxQx6cgYMr3AjAQsgA4mMswmwX_NOE3U'; // Substitua por sua chave de API
+        const apiKey = 'AIzaSyDWxQx6cgYMr3AjAQsgA4mMswmwX_NOE3U'; // <<--- SUBSTITUA AQUI PELA SUA CHAVE DE API REAL
         
         let chatHistory = [{
             role: 'user',
-            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, mensalidades, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Crianças (Segunda, quarta e sexta, Kids 1: 18:30-19:30, Kids 2: 19:30-20:30), Juvenil (Terça e quinta, 19:00-20:00), Adultos (Segunda a sexta, 20:30-22:00) e Sábado (16:00). As mensalidades são: Adultos R$ 85,00 e Crianças/Juvenil R$ 70,00. A academia fica na Rua Padre Diogo Rodrigues, 475.' }]
+            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia e o Professor Sansão, tirando dúvidas de forma rápida e amigável. Dê respostas curtas e diretas, como uma pessoa conversando. As informações da academia são: Horários: Crianças (Segunda, quarta e sexta, Kids 1: 18:30-19:30, Kids 2: 19:30-20:30), Juvenil (Terça e quinta, 19:00-20:00), Adultos (Segunda a sexta, 20:30-22:00) e Sábado (16:00). Mensalidades: Adultos R$ 85,00 e Crianças/Juvenil R$ 70,00. Endereço: Rua Padre Diogo Rodrigues, 475.' }]
         }];
 
         function showMessage(text, sender) {
@@ -254,6 +269,17 @@
             chatBox.appendChild(messageDiv);
             chatBox.scrollTop = chatBox.scrollHeight;
         }
+        
+        // Função para mostrar ou esconder o chat
+        openChatBtn.addEventListener('click', () => {
+            chatContainer.classList.remove('chat-minimized');
+            openChatBtn.style.display = 'none';
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatContainer.classList.add('chat-minimized');
+            openChatBtn.style.display = 'block';
+        });
 
         async function sendMessage() {
             const userText = userInput.value.trim();
@@ -311,11 +337,7 @@
                 sendMessage();
             }
         });
-
-        closeChatBtn.addEventListener('click', () => {
-            chatContainer.style.display = 'none';
-        });
-
+        
     </script>
 </body>
 </html>
