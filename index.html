@@ -9,7 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Fundo Preto */
+            background-color: #000000;
             color: #e2e8f0;
         }
         .container {
@@ -18,7 +18,7 @@
             padding: 2rem 1rem;
         }
         .card {
-            background-color: #1a202c; /* Cards em um tom de preto mais claro */
+            background-color: #1a202c;
             border-radius: 1.5rem;
             box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
             padding: 2rem;
@@ -28,36 +28,42 @@
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.15), 0 10px 10px -5px rgba(255, 255, 255, 0.08);
-            border-color: #ffd700; /* Dourado */
+            border-color: #ffd700;
         }
         .cta-button {
-            background-color: #ffd700; /* Botão Dourado */
+            background-color: #ffd700;
             color: #000000;
-            padding: 0.75rem 1.5rem;
+            padding: 1rem 2rem; /* Aumentei o padding */
             border-radius: 0.75rem;
             font-weight: 700;
             transition: background-color 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #e6c200; /* Dourado mais escuro no hover */
-        }
-        .kit-icon {
-            font-size: 2.5rem;
-            line-height: 1;
-            color: #ffd700; /* Ícones dourados */
-        }
-        .kit-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: #fff;
+            background-color: #e6c200;
         }
         .logo-img {
-            max-width: 250px;
+            max-width: 280px; /* Aumentei o tamanho do logo */
             height: auto;
             margin: auto;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 2.25rem; /* Aumentei o tamanho do título da seção */
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1.5rem;
         }
         .list-style-none {
             list-style: none;
+        }
+        .list-item-title {
+            font-size: 1.25rem; /* Tamanho do título da lista */
+            font-weight: 600;
+            color: #fff;
+        }
+        .list-item-text {
+            font-size: 1rem; /* Tamanho do texto da lista */
+            color: #d1d5db;
         }
     </style>
 </head>
@@ -65,87 +71,93 @@
 
     <div class="container mx-auto px-4 py-12">
 
-        <header class="text-center mb-16">
-            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/d17e056a-0e10-403b-8580-32e5ec16183e.webp" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img">
-            <p class="text-lg sm:text-xl text-gray-400 font-medium mt-4">Força, honra e técnica. Professor Sansão.</p>
+        <header class="text-center mb-12">
+            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/d17e056a-0e10-403b-8580-32e5ec16183e.webp" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img mx-auto">
+            <p class="text-xl sm:text-2xl font-bold text-gray-400 mt-4">Força, honra e técnica. Onde campeões são forjados.</p>
         </header>
         
-        <section class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white mb-4">A arte suave que transforma vidas</h2>
-            <p class="text-md text-gray-400 max-w-2xl mx-auto">
-                O Jiu-Jitsu vai muito além da luta. É uma filosofia que promove disciplina, respeito, autocontrole e bem-estar físico e mental. Em nossa academia, você aprenderá a se defender, aprimorar sua condição física e fazer parte de uma comunidade que se apoia dentro e fora do tatame.
-            </p>
-            <p class="text-md text-gray-400 mt-4 max-w-2xl mx-auto">
-                **Nossa missão é formar campeões da vida, que usam a resiliência do tatame para vencer os desafios diários.**
-            </p>
-        </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <div class="card p-8 flex flex-col items-center text-center">
-                <div class="kit-icon mb-4">📅</div>
-                <h2 class="kit-title mb-2">Horários das Aulas</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Confira nossa programação de treinos.</p>
-                
-                <ul class="list-style-none text-left w-full space-y-4">
-                    <li>
-                        <h3 class="text-lg font-semibold text-white mb-2">Tarde:</h3>
-                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+        <section class="mb-16">
+            <div class="card p-8 text-center">
+                <h2 class="section-title">Horários das Aulas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-xl">
+                    <div>
+                        <h3 class="list-item-title mb-2">Tarde</h3>
+                        <ul class="list-none space-y-1 list-item-text">
                             <li>15:30 às 17:00 – Adulto</li>
                         </ul>
-                    </li>
-                    <li>
-                        <h3 class="text-lg font-semibold text-white mb-2">Kids:</h3>
-                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                    </div>
+                    <div>
+                        <h3 class="list-item-title mb-2">Kids</h3>
+                        <ul class="list-none space-y-1 list-item-text">
                             <li>18:00 às 19:00 – Kids 1</li>
                             <li>19:00 às 20:00 – Kids 2</li>
                         </ul>
-                    </li>
-                    <li>
-                        <h3 class="text-lg font-semibold text-white mb-2">Noite:</h3>
-                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                    </div>
+                    <div>
+                        <h3 class="list-item-title mb-2">Noite</h3>
+                        <ul class="list-none space-y-1 list-item-text">
                             <li>20:00 às 21:30 – Adulto</li>
                         </ul>
-                    </li>
-                    <li>
-                        <h3 class="text-lg font-semibold text-white mb-2">Sábado:</h3>
-                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                    </div>
+                    <div>
+                        <h3 class="list-item-title mb-2">Sábado</h3>
+                        <ul class="list-none space-y-1 list-item-text">
                             <li>16:00 – Adulto</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="card p-8">
+                <h2 class="section-title text-center">Benefícios do Jiu-Jitsu</h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl list-none text-left">
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl text-yellow-500">🛡️</span>
+                        <div>
+                            <h3 class="list-item-title">Autodefesa</h3>
+                            <p class="list-item-text">Aprenda técnicas eficazes para se proteger em qualquer situação.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl text-yellow-500">💪</span>
+                        <div>
+                            <h3 class="list-item-title">Condicionamento Físico</h3>
+                            <p class="list-item-text">Melhora a força, a flexibilidade e a resistência cardiovascular.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl text-yellow-500">🧠</span>
+                        <div>
+                            <h3 class="list-item-title">Saúde Mental</h3>
+                            <p class="list-item-text">Reduz o estresse e a ansiedade, promovendo clareza mental.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl text-yellow-500">🤝</span>
+                        <div>
+                            <h3 class="list-item-title">Disciplina e Respeito</h3>
+                            <p class="list-item-text">Uma filosofia de vida que constrói caráter e valores fortes.</p>
+                        </div>
                     </li>
                 </ul>
-
-                <button class="cta-button w-full mt-8" onclick="showModal()">Agende uma aula experimental!</button>
             </div>
+        </section>
 
-            <div class="card p-8 flex flex-col items-center text-center">
-                <div class="kit-icon mb-4">🧠</div>
-                <h2 class="kit-title mb-2">Benefícios do Jiu-Jitsu</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Mais do que uma luta, um estilo de vida.</p>
-                <div class="mb-6 w-full">
-                    <ul class="list-disc text-left text-sm space-y-2 text-gray-400">
-                        <li>**Condicionamento físico**: Ajuda a melhorar a força, a flexibilidade e a resistência cardiovascular.</li>
-                        <li>**Autoconfiança**: O progresso na luta se reflete em mais segurança para o dia a dia.</li>
-                        <li>**Autodefesa**: Aprenda técnicas eficazes para se proteger.</li>
-                        <li>**Disciplina e Respeito**: A hierarquia das faixas e a filosofia da luta ensinam valores importantes.</li>
-                        <li>**Alívio do estresse**: O treino físico e a concentração na técnica são excelentes para a saúde mental.</li>
-                    </ul>
-                </div>
-                <button class="cta-button w-full mt-auto" onclick="showModal()">Converse com o Professor!</button>
-            </div>
-        </div>
-        
-        <section class="mt-16 text-center">
+        <section class="text-center">
             <h2 class="text-3xl font-bold mb-4">Pronto para começar?</h2>
             <p class="text-xl text-gray-400 mb-8">Venha fazer parte da nossa família no tatame.</p>
             <div class="text-lg text-gray-300">
-                <p class="mb-2">📍 **Endereço:** Rua Exemplo, 123 - Jardim São Paulo</p>
+                <p class="mb-2">📍 **Endereço:** Rua Padre Diogo Rodrigues, 475</p>
                 <p class="mb-2">📱 **(81) 98580-0823**</p>
                 <p class="mb-2">📸 **@Lucas_Allbuquerque__**</p>
             </div>
-            <p class="mt-6 text-sm text-gray-500">Oferecemos 30 dias de suporte total para sua tranquilidade.</p>
+            <div class="mt-8">
+                <button class="cta-button" onclick="showModal()">Agende sua Aula Experimental!</button>
+            </div>
         </section>
-
+        
         <div class="mt-12 text-center">
             <h3 class="text-xl font-bold text-white">Professor: Sansão</h3>
         </div>
