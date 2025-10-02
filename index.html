@@ -68,6 +68,9 @@
         .highlight {
             color: #ffd700;
         }
+        .text-custom-yellow {
+            color: #ffd700;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -81,32 +84,53 @@
         
         <section class="mb-16">
             <div class="card p-8 text-center">
-                <h2 class="section-title">Horários das Aulas</h2>
+                <h2 class="section-title">Horários e Valores</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-xl">
                     <div>
-                        <h3 class="list-item-title mb-2">Tarde</h3>
-                        <ul class="list-none space-y-1 list-item-text">
-                            <li>15:30 às 17:00 – Adulto</li>
-                        </ul>
+                        <h3 class="list-item-title mb-4">Horários dos Treinos 🥋</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-custom-yellow">👦 Crianças</h4>
+                                <p class="text-sm">Segunda, quarta e sexta</p>
+                                <ul class="list-disc list-inside text-sm text-gray-400 mt-1">
+                                    <li>Kids 1: <span class="highlight">18h30 às 19h30</span></li>
+                                    <li>Kids 2: <span class="highlight">19h30 às 20h30</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-custom-yellow">🧑 Juvenil (13 a 16 anos)</h4>
+                                <p class="text-sm">Terça e quinta</p>
+                                <ul class="list-disc list-inside text-sm text-gray-400 mt-1">
+                                    <li><span class="highlight">19h às 20h</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-custom-yellow">👨‍🦱 Adultos</h4>
+                                <p class="text-sm">De segunda a sexta</p>
+                                <ul class="list-disc list-inside text-sm text-gray-400 mt-1">
+                                    <li><span class="highlight">20h30 às 22h</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-custom-yellow">Sábado</h4>
+                                <ul class="list-disc list-inside text-sm text-gray-400 mt-1">
+                                    <li><span class="highlight">16:00 – Adulto</span></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <h3 class="list-item-title mb-2">Kids</h3>
-                        <ul class="list-none space-y-1 list-item-text">
-                            <li>18:00 às 19:00 – Kids 1</li>
-                            <li>19:00 às 20:00 – Kids 2</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="list-item-title mb-2">Noite</h3>
-                        <ul class="list-none space-y-1 list-item-text">
-                            <li>20:00 às 21:30 – Adulto</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="list-item-title mb-2">Sábado</h3>
-                        <ul class="list-none space-y-1 list-item-text">
-                            <li>16:00 – Adulto</li>
-                        </ul>
+                        <h3 class="list-item-title mb-4">Mensalidades 💰</h3>
+                        <div class="space-y-4">
+                            <div class="p-4 bg-gray-800 rounded-lg">
+                                <p class="text-md">Adultos</p>
+                                <p class="text-2xl font-bold text-custom-yellow">R$ 85,00</p>
+                            </div>
+                            <div class="p-4 bg-gray-800 rounded-lg">
+                                <p class="text-md">Crianças e Juvenil</p>
+                                <p class="text-2xl font-bold text-custom-yellow">R$ 70,00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -221,11 +245,11 @@
         const chatContainer = document.getElementById('chat-container');
         const closeChatBtn = document.getElementById('close-chat-btn');
         const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
-        const apiKey = 'AIzaSyDWxQx6cgYMr3AjAQsgA4mMswmwX_NOE3U'; // Substitua por sua chave de API
+        const apiKey = 'SUA_CHAVE_DE_API_GEMINI'; // Substitua por sua chave de API
         
         let chatHistory = [{
             role: 'user',
-            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00). A academia fica na Rua Padre Diogo Rodrigues, 475.' }]
+            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00). A academia fica na Rua Padre Diogo Rodrigues, 475. As mensalidades são: Adultos R$ 85,00 e Crianças/Juvenil R$ 70,00.' }]
         }];
 
         function showMessage(text, sender) {
