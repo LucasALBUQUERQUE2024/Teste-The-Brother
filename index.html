@@ -112,11 +112,11 @@
     <div class="container mx-auto px-4 py-12">
 
         <header class="text-center mb-16">
-            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/SANS%C3%83O%20FIGHT%20TEAM.png" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img">
+            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/d17e056a-0e10-403b-8580-32e5ec16183e.webp" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img">
             <p class="text-lg sm:text-xl text-gray-400 font-medium mt-4">Onde campeões são forjados.</p>
         </header>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div class="card p-8 flex flex-col items-center text-center">
                 <div class="kit-icon mb-4">📅</div>
@@ -147,22 +147,6 @@
                         <li>16:00 – Adulto</li>
                     </ul>
                 </div>
-                <button class="cta-button w-full" onclick="showModal()">Fale conosco!</button>
-            </div>
-
-            <div class="card p-8 flex flex-col items-center text-center">
-                <div class="kit-icon mb-4">🧑‍🤝‍🧑</div>
-                <h2 class="kit-title mb-2">Nossos Instrutores</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Conheça a equipe que te guiará no tatame.</p>
-                <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Equipe:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>**Lucas Albuquerque** - Faixa Preta</li>
-                        <li>**João da Silva** - Faixa Marrom</li>
-                        <li>**Pedro Martins** - Faixa Roxa</li>
-                    </ul>
-                </div>
-                <div class="kit-price mb-4">Compromisso e excelência.</div>
                 <button class="cta-button w-full" onclick="showModal()">Fale conosco!</button>
             </div>
 
@@ -198,6 +182,10 @@
             </div>
             <p class="mt-6 text-sm text-gray-500">Oferecemos 30 dias de suporte total para sua tranquilidade.</p>
         </section>
+        
+        <div class="mt-12 text-center">
+            <h3 class="text-xl font-bold text-white">Professor: Sansão</h3>
+        </div>
 
     </div>
 
@@ -219,7 +207,7 @@
         <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm max-h-80 md:max-h-96 bg-gray-900">
             <div class="flex justify-start">
                 <div class="bg-gray-700 text-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-lg max-w-[80%]">
-                    E aí! Sou o Lucas, seu assistente virtual da Sansão Fight Team. Em que posso te ajudar hoje?
+                    E aí! Sou o assistente virtual da Sansão Fight Team. Em que posso te ajudar hoje?
                 </div>
             </div>
         </div>
@@ -259,7 +247,7 @@
         
         let chatHistory = [{
             role: 'user',
-            parts: [{ text: 'Você é Lucas, o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00).' }]
+            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00).' }]
         }];
 
         function showMessage(text, sender) {
@@ -303,4 +291,34 @@
                 
                 const result = await response.json();
                 const candidate = result.candidates?.[0];
-                let botMessage = "Desculpe,
+                let botMessage = "Desculpe, não consegui gerar uma resposta. Tente novamente.";
+                
+                if (candidate && candidate.content && candidate.content.parts && candidate.content.parts.length > 0) {
+                    botMessage = candidate.content.parts[0].text;
+                }
+                
+                document.getElementById('loading-indicator').remove();
+                showMessage(botMessage, 'bot');
+                chatHistory.push({ role: 'model', parts: [{ text: botMessage }] });
+
+            } catch (error) {
+                console.error("Erro ao chamar a API Gemini:", error);
+                document.getElementById('loading-indicator').remove();
+                showMessage("Ops, algo deu errado. Tente de novo.", 'bot');
+            }
+        }
+
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatContainer.style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
