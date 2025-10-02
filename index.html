@@ -51,59 +51,13 @@
             font-weight: 800;
             color: #fff;
         }
-        .kit-price {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #ffd700; /* Preços em dourado */
-        }
-        .kit-list li {
-            position: relative;
-            padding-left: 2rem;
-        }
-        .kit-list li::before {
-            content: '🥋'; /* Ícone de kimono */
-            position: absolute;
-            left: 0;
-            color: #ffd700;
-            font-weight: bold;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.6);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #1a202c;
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            text-align: center;
-            max-width: 500px;
-            margin: 1.5rem;
-            position: relative;
-        }
-        .close-button {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: #e2e8f0;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
         .logo-img {
             max-width: 250px;
             height: auto;
             margin: auto;
+        }
+        .list-style-none {
+            list-style: none;
         }
     </style>
 </head>
@@ -113,65 +67,74 @@
 
         <header class="text-center mb-16">
             <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/d17e056a-0e10-403b-8580-32e5ec16183e.webp" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img">
-            <p class="text-lg sm:text-xl text-gray-400 font-medium mt-4">Onde campeões são forjados.</p>
+            <p class="text-lg sm:text-xl text-gray-400 font-medium mt-4">Força, honra e técnica. Professor Sansão.</p>
         </header>
         
+        <section class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white mb-4">A arte suave que transforma vidas</h2>
+            <p class="text-md text-gray-400 max-w-2xl mx-auto">
+                O Jiu-Jitsu vai muito além da luta. É uma filosofia que promove disciplina, respeito, autocontrole e bem-estar físico e mental. Em nossa academia, você aprenderá a se defender, aprimorar sua condição física e fazer parte de uma comunidade que se apoia dentro e fora do tatame.
+            </p>
+            <p class="text-md text-gray-400 mt-4 max-w-2xl mx-auto">
+                **Nossa missão é formar campeões da vida, que usam a resiliência do tatame para vencer os desafios diários.**
+            </p>
+        </section>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div class="card p-8 flex flex-col items-center text-center">
                 <div class="kit-icon mb-4">📅</div>
                 <h2 class="kit-title mb-2">Horários das Aulas</h2>
                 <p class="text-sm font-medium text-gray-400 mb-4">Confira nossa programação de treinos.</p>
-                <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Tarde:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>15:30 às 17:00 – Adulto</li>
-                    </ul>
-                </div>
-                <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Kids:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>18:00 às 19:00 – Kids 1</li>
-                        <li>19:00 às 20:00 – Kids 2</li>
-                    </ul>
-                </div>
-                <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Noite:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>20:00 às 21:30 – Adulto</li>
-                    </ul>
-                </div>
-                <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Sábado:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>16:00 – Adulto</li>
-                    </ul>
-                </div>
-                <button class="cta-button w-full" onclick="showModal()">Fale conosco!</button>
+                
+                <ul class="list-style-none text-left w-full space-y-4">
+                    <li>
+                        <h3 class="text-lg font-semibold text-white mb-2">Tarde:</h3>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                            <li>15:30 às 17:00 – Adulto</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="text-lg font-semibold text-white mb-2">Kids:</h3>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                            <li>18:00 às 19:00 – Kids 1</li>
+                            <li>19:00 às 20:00 – Kids 2</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="text-lg font-semibold text-white mb-2">Noite:</h3>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                            <li>20:00 às 21:30 – Adulto</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="text-lg font-semibold text-white mb-2">Sábado:</h3>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-gray-400">
+                            <li>16:00 – Adulto</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button class="cta-button w-full mt-8" onclick="showModal()">Agende uma aula experimental!</button>
             </div>
 
             <div class="card p-8 flex flex-col items-center text-center">
-                <div class="kit-icon mb-4">❓</div>
-                <h2 class="kit-title mb-2">Dúvidas Frequentes</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Tire suas dúvidas antes de começar.</p>
+                <div class="kit-icon mb-4">🧠</div>
+                <h2 class="kit-title mb-2">Benefícios do Jiu-Jitsu</h2>
+                <p class="text-sm font-medium text-gray-400 mb-4">Mais do que uma luta, um estilo de vida.</p>
                 <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Perguntas:</h3>
-                    <ul class="kit-list text-left text-sm space-y-2">
-                        <li>Preciso comprar kimono?</li>
-                        <li>Qual a idade mínima?</li>
-                        <li>Posso agendar uma aula experimental?</li>
+                    <ul class="list-disc text-left text-sm space-y-2 text-gray-400">
+                        <li>**Condicionamento físico**: Ajuda a melhorar a força, a flexibilidade e a resistência cardiovascular.</li>
+                        <li>**Autoconfiança**: O progresso na luta se reflete em mais segurança para o dia a dia.</li>
+                        <li>**Autodefesa**: Aprenda técnicas eficazes para se proteger.</li>
+                        <li>**Disciplina e Respeito**: A hierarquia das faixas e a filosofia da luta ensinam valores importantes.</li>
+                        <li>**Alívio do estresse**: O treino físico e a concentração na técnica são excelentes para a saúde mental.</li>
                     </ul>
                 </div>
-                <div class="kit-price mb-4">Estamos aqui para te ajudar.</div>
-                <button class="cta-button w-full" onclick="showModal()">Fale conosco!</button>
+                <button class="cta-button w-full mt-auto" onclick="showModal()">Converse com o Professor!</button>
             </div>
         </div>
         
-        <div class="w-full text-center mt-12 mb-12 py-2">
-            <p class="text-lg font-bold text-white mb-1">Mais que uma luta, uma família.</p>
-            <p class="text-sm text-gray-300">Nossa missão é formar campeões dentro e fora do tatame.</p>
-        </div>
-
         <section class="mt-16 text-center">
             <h2 class="text-3xl font-bold mb-4">Pronto para começar?</h2>
             <p class="text-xl text-gray-400 mb-8">Venha fazer parte da nossa família no tatame.</p>
@@ -182,7 +145,7 @@
             </div>
             <p class="mt-6 text-sm text-gray-500">Oferecemos 30 dias de suporte total para sua tranquilidade.</p>
         </section>
-        
+
         <div class="mt-12 text-center">
             <h3 class="text-xl font-bold text-white">Professor: Sansão</h3>
         </div>
