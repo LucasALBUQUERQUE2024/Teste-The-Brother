@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Brothers Jardim São Paulo - Jiu-Jitsu</title>
+    <title>Sansão Fight Team - Brazilian Jiu-Jitsu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -28,10 +28,10 @@
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.15), 0 10px 10px -5px rgba(255, 255, 255, 0.08);
-            border-color: #fbd38d; /* Borda amarela no hover */
+            border-color: #ffd700; /* Dourado */
         }
         .cta-button {
-            background-color: #fbd38d; /* Botão amarelo */
+            background-color: #ffd700; /* Botão Dourado */
             color: #000000;
             padding: 0.75rem 1.5rem;
             border-radius: 0.75rem;
@@ -39,12 +39,12 @@
             transition: background-color 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #f6ad55; /* Amarelo mais escuro no hover */
+            background-color: #e6c200; /* Dourado mais escuro no hover */
         }
         .kit-icon {
             font-size: 2.5rem;
             line-height: 1;
-            color: #fbd38d; /* Ícones amarelos */
+            color: #ffd700; /* Ícones dourados */
         }
         .kit-title {
             font-size: 1.5rem;
@@ -54,7 +54,7 @@
         .kit-price {
             font-size: 2.25rem;
             font-weight: 700;
-            color: #fbd38d; /* Preços em amarelo */
+            color: #ffd700; /* Preços em dourado */
         }
         .kit-list li {
             position: relative;
@@ -64,7 +64,7 @@
             content: '🥋'; /* Ícone de kimono */
             position: absolute;
             left: 0;
-            color: #fbd38d;
+            color: #ffd700;
             font-weight: bold;
         }
         
@@ -112,7 +112,7 @@
     <div class="container mx-auto px-4 py-12">
 
         <header class="text-center mb-16">
-            <img src="d17e056a-0e10-403b-8580-32e5ec16183e.webp" alt="The Brothers Jiu Jitsu Para Todos" class="logo-img">
+            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/SANS%C3%83O%20FIGHT%20TEAM.png" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img">
             <p class="text-lg sm:text-xl text-gray-400 font-medium mt-4">Onde campeões são forjados.</p>
         </header>
         
@@ -121,24 +121,39 @@
             <div class="card p-8 flex flex-col items-center text-center">
                 <div class="kit-icon mb-4">📅</div>
                 <h2 class="kit-title mb-2">Horários das Aulas</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Encontre o melhor horário para treinar.</p>
+                <p class="text-sm font-medium text-gray-400 mb-4">Confira nossa programação de treinos.</p>
                 <div class="mb-6 w-full">
-                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Horários:</h3>
+                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Tarde:</h3>
                     <ul class="kit-list text-left text-sm space-y-2">
-                        <li>Segunda a Sexta: 07h às 08h30 (Treino Aberto)</li>
-                        <li>Segunda e Quarta: 19h às 20h30 (Básico)</li>
-                        <li>Terça e Quinta: 20h30 às 22h (Avançado)</li>
-                        <li>Sábado: 10h às 12h (Treino Aberto)</li>
+                        <li>15:30 às 17:00 – Adulto</li>
                     </ul>
                 </div>
-                <div class="kit-price mb-4">Venha fazer uma aula experimental!</div>
+                <div class="mb-6 w-full">
+                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Kids:</h3>
+                    <ul class="kit-list text-left text-sm space-y-2">
+                        <li>18:00 às 19:00 – Kids 1</li>
+                        <li>19:00 às 20:00 – Kids 2</li>
+                    </ul>
+                </div>
+                <div class="mb-6 w-full">
+                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Noite:</h3>
+                    <ul class="kit-list text-left text-sm space-y-2">
+                        <li>20:00 às 21:30 – Adulto</li>
+                    </ul>
+                </div>
+                <div class="mb-6 w-full">
+                    <h3 class="text-lg font-semibold text-white mb-2 text-left">Sábado:</h3>
+                    <ul class="kit-list text-left text-sm space-y-2">
+                        <li>16:00 – Adulto</li>
+                    </ul>
+                </div>
                 <button class="cta-button w-full" onclick="showModal()">Fale conosco!</button>
             </div>
 
             <div class="card p-8 flex flex-col items-center text-center">
                 <div class="kit-icon mb-4">🧑‍🤝‍🧑</div>
                 <h2 class="kit-title mb-2">Nossos Instrutores</h2>
-                <p class="text-sm font-medium text-gray-400 mb-4">Conheça nossa equipe de professores.</p>
+                <p class="text-sm font-medium text-gray-400 mb-4">Conheça a equipe que te guiará no tatame.</p>
                 <div class="mb-6 w-full">
                     <h3 class="text-lg font-semibold text-white mb-2 text-left">Equipe:</h3>
                     <ul class="kit-list text-left text-sm space-y-2">
@@ -198,3 +213,94 @@
     
     <div id="chat-container" class="fixed right-4 bottom-4 w-11/12 max-w-sm md:max-w-md bg-gray-800 rounded-2xl shadow-xl flex flex-col overflow-hidden transform scale-95 md:scale-100">
         <div class="bg-yellow-500 text-black p-4 rounded-t-2xl flex justify-between items-center">
+            <h3 class="text-lg font-bold">Assistente da Sansão Fight Team ✨</h3>
+            <button id="close-chat-btn" class="text-xl font-bold text-black">&times;</button>
+        </div>
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm max-h-80 md:max-h-96 bg-gray-900">
+            <div class="flex justify-start">
+                <div class="bg-gray-700 text-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-lg max-w-[80%]">
+                    E aí! Sou o Lucas, seu assistente virtual da Sansão Fight Team. Em que posso te ajudar hoje?
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-700 flex items-center gap-2 bg-gray-900">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <button id="send-btn" class="bg-yellow-500 text-black p-3 rounded-full hover:bg-yellow-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const chatBox = document.getElementById('chat-box');
+        const chatContainer = document.getElementById('chat-container');
+        const closeChatBtn = document.getElementById('close-chat-btn');
+        const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
+        const apiKey = 'SUA_CHAVE_DE_API_GEMINI';
+        
+        let chatHistory = [{
+            role: 'user',
+            parts: [{ text: 'Você é Lucas, o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00).' }]
+        }];
+
+        function showMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+            messageDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg max-w-[80%] ${sender === 'user' ? 'bg-yellow-500 text-black rounded-tr-xl rounded-bl-xl rounded-tl-xl' : 'bg-gray-700 text-white rounded-tr-xl rounded-bl-xl rounded-br-xl'}">${text}</div>`;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const userText = userInput.value.trim();
+            if (userText === '') return;
+
+            showMessage(userText, 'user');
+            userInput.value = '';
+            
+            chatHistory.push({ role: 'user', parts: [{ text: userText }] });
+
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loading-indicator';
+            loadingDiv.className = 'flex justify-start';
+            loadingDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg bg-gray-700 max-w-[80%]">Pensando...</div>`;
+            chatBox.appendChild(loadingDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            const payload = {
+                contents: chatHistory,
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: chatHistory[0].parts[0].text }]
+                }
+            };
+            
+            try {
+                const response = await fetch(API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+                let botMessage = "Desculpe,
