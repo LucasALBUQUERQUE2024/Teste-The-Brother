@@ -33,7 +33,7 @@
         .cta-button {
             background-color: #ffd700;
             color: #000000;
-            padding: 1rem 2rem; /* Aumentei o padding */
+            padding: 1rem 2rem;
             border-radius: 0.75rem;
             font-weight: 700;
             transition: background-color 0.3s ease;
@@ -42,28 +42,31 @@
             background-color: #e6c200;
         }
         .logo-img {
-            max-width: 280px; /* Aumentei o tamanho do logo */
+            max-width: 280px;
             height: auto;
             margin: auto;
             margin-bottom: 2rem;
         }
         .section-title {
-            font-size: 2.25rem; /* Aumentei o tamanho do título da seção */
+            font-size: 2.25rem;
             font-weight: 800;
-            color: #fff;
+            color: #ffd700; /* Título da seção em dourado */
             margin-bottom: 1.5rem;
         }
         .list-style-none {
             list-style: none;
         }
         .list-item-title {
-            font-size: 1.25rem; /* Tamanho do título da lista */
+            font-size: 1.25rem;
             font-weight: 600;
-            color: #fff;
+            color: #ffd700; /* Título da lista em dourado */
         }
         .list-item-text {
-            font-size: 1rem; /* Tamanho do texto da lista */
+            font-size: 1rem;
             color: #d1d5db;
+        }
+        .highlight {
+            color: #ffd700; /* Dourado para destaque */
         }
     </style>
 </head>
@@ -114,28 +117,28 @@
                 <h2 class="section-title text-center">Benefícios do Jiu-Jitsu</h2>
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl list-none text-left">
                     <li class="flex items-center space-x-3">
-                        <span class="text-3xl text-yellow-500">🛡️</span>
+                        <span class="text-3xl highlight">🛡️</span>
                         <div>
                             <h3 class="list-item-title">Autodefesa</h3>
                             <p class="list-item-text">Aprenda técnicas eficazes para se proteger em qualquer situação.</p>
                         </div>
                     </li>
                     <li class="flex items-center space-x-3">
-                        <span class="text-3xl text-yellow-500">💪</span>
+                        <span class="text-3xl highlight">💪</span>
                         <div>
                             <h3 class="list-item-title">Condicionamento Físico</h3>
                             <p class="list-item-text">Melhora a força, a flexibilidade e a resistência cardiovascular.</p>
                         </div>
                     </li>
                     <li class="flex items-center space-x-3">
-                        <span class="text-3xl text-yellow-500">🧠</span>
+                        <span class="text-3xl highlight">🧠</span>
                         <div>
                             <h3 class="list-item-title">Saúde Mental</h3>
                             <p class="list-item-text">Reduz o estresse e a ansiedade, promovendo clareza mental.</p>
                         </div>
                     </li>
                     <li class="flex items-center space-x-3">
-                        <span class="text-3xl text-yellow-500">🤝</span>
+                        <span class="text-3xl highlight">🤝</span>
                         <div>
                             <h3 class="list-item-title">Disciplina e Respeito</h3>
                             <p class="list-item-text">Uma filosofia de vida que constrói caráter e valores fortes.</p>
@@ -218,11 +221,11 @@
         const chatContainer = document.getElementById('chat-container');
         const closeChatBtn = document.getElementById('close-chat-btn');
         const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
-        const apiKey = 'SUA_CHAVE_DE_API_GEMINI';
+        const apiKey = 'SUA_CHAVE_DE_API_GEMINI'; // Substitua por sua chave de API
         
         let chatHistory = [{
             role: 'user',
-            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00).' }]
+            parts: [{ text: 'Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é ajudar os visitantes a conhecerem mais sobre a academia. Você pode responder sobre os horários das aulas, como funciona a matrícula, o que os alunos precisam para começar e a filosofia do jiu-jitsu. Seja amigável e incentive a visita à academia. Os horários são: Tarde (15:30 às 17:00), Kids 1 (18:00 às 19:00), Kids 2 (19:00 às 20:00), Noite (20:00 às 21:30) e Sábado (16:00). A academia fica na Rua Padre Diogo Rodrigues, 475.' }]
         }];
 
         function showMessage(text, sender) {
