@@ -1,373 +1,372 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sansão Fight Team - Brazilian Jiu-Jitsu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000000; /* Fundo puro preto para combinar com a logo */
-            color: #e2e8f0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem 1rem;
-        }
-        .card {
-            background-color: #1a202c;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid transparent;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.15), 0 10px 10px -5px rgba(255, 255, 255, 0.08);
-            border-color: #ffd700;
-        }
-        .cta-button {
-            background-color: #ffd700;
-            color: #000000;
-            padding: 1rem 2rem;
-            border-radius: 0.75rem;
-            font-weight: 700;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #e6c200;
-        }
-        .logo-img {
-            max-width: 280px;
-            height: auto;
-            margin: auto;
-            margin-bottom: 2rem;
-        }
-        .section-title {
-            font-size: 2.25rem;
-            font-weight: 800;
-            color: #ffd700;
-            margin-bottom: 1.5rem;
-        }
-        .list-style-none {
-            list-style: none;
-        }
-        .list-item-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #fff;
-        }
-        .list-item-text {
-            font-size: 1rem;
-            color: #d1d5db;
-        }
-        .highlight {
-            color: #ffd700;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background-color: #1a202c;
-            padding: 2rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
-            text-align: center;
-            position: relative;
-        }
-        .close-button {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            color: #d1d5db;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sansão Fight Team - Brazilian Jiu-Jitsu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000; /* Fundo puro preto para combinar com a logo */
+            color: #e2e8f0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem 1rem;
+        }
+        .card {
+            background-color: #1a202c;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.15), 0 10px 10px -5px rgba(255, 255, 255, 0.08);
+            border-color: #ffd700;
+        }
+        .cta-button {
+            background-color: #ffd700;
+            color: #000000;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e6c200;
+        }
+        .logo-img {
+            max-width: 280px;
+            height: auto;
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+        }
+        .list-style-none {
+            list-style: none;
+        }
+        .list-item-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .list-item-text {
+            font-size: 1rem;
+            color: #d1d5db;
+        }
+        .highlight {
+            color: #ffd700;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #1a202c;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+            text-align: center;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: #d1d5db;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-    <div class="container mx-auto px-4 py-12">
+    <div class="container mx-auto px-4 py-12">
 
-        <header class="text-center mb-12">
-            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/Gemini_Generated_Image_yc16a3yc16a3yc16-removebg-preview.png" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img mx-auto">
-            <p class="text-xl sm:text-2xl font-bold text-gray-400 mt-4">Força, honra e técnica. Onde campeões são forjados.</p>
-        </header>
-        
-        <section class="mb-16">
-            <div class="card p-8 text-center">
-                <h2 class="section-title">Horários e Valores</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-xl">
-                    <div>
-                        <h3 class="list-item-title mb-4">Horários dos Treinos 🥋</h3>
-                        <div class="space-y-4 text-gray-400 text-sm">
-                            <div>
-                                <h4 class="font-bold text-white">👦 Crianças</h4>
-                                <p>Segunda, quarta e sexta</p>
-                                <ul class="list-disc list-inside mt-1">
-                                    <li>Kids 1: <span class="highlight">18h30 às 19h30</span></li>
-                                    <li>Kids 2: <span class="highlight">19h30 às 20h30</span></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white">🧑 Juvenil (13 a 16 anos)</h4>
-                                <p>Terça e quinta</p>
-                                <ul class="list-disc list-inside mt-1">
-                                    <li><span class="highlight">19h às 20h</span></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white">👨‍🦱 Adultos</h4>
-                                <p>De segunda a sexta</p>
-                                <ul class="list-disc list-inside mt-1">
-                                    <li><span class="highlight">20h30 às 22h</span></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-white">Sábado</h4>
-                                <ul class="list-disc list-inside mt-1">
-                                    <li><span class="highlight">16:00 – Adulto</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col justify-center space-y-4">
-                        <h3 class="list-item-title mb-4">Mensalidades 💰</h3>
-                        <div class="p-4 bg-gray-800 rounded-lg">
-                            <p class="text-md font-bold text-white">Adultos</p>
-                            <p class="text-2xl font-bold highlight">R$ 85,00</p>
-                        </div>
-                        <div class="p-4 bg-gray-800 rounded-lg">
-                            <p class="text-md font-bold text-white">Crianças e Juvenil</p>
-                            <p class="text-2xl font-bold highlight">R$ 70,00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <header class="text-center mb-12">
+            <img src="https://raw.githubusercontent.com/LucasALBUQUERQUE2024/Teste-The-Brother/main/Gemini_Generated_Image_yc16a3yc16a3yc16-removebg-preview.png" alt="Sansão Fight Team Brazilian Jiu-Jitsu" class="logo-img mx-auto">
+            <p class="text-xl sm:text-2xl font-bold text-gray-400 mt-4">Força, honra e técnica. Onde campeões são forjados.</p>
+        </header>
+        
+        <section class="mb-16">
+            <div class="card p-8 text-center">
+                <h2 class="section-title">Horários e Valores</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left text-xl">
+                    <div>
+                        <h3 class="list-item-title mb-4">Horários dos Treinos 🥋</h3>
+                        <div class="space-y-4 text-gray-400 text-base">
+                            <div>
+                                <h4 class="font-bold text-white">👦 Crianças</h4>
+                                <p>Segunda, quarta e sexta</p>
+                                <ul class="list-disc list-inside mt-1 text-xl">
+                                    <li>Kids 1: <span class="highlight">18h30 às 19h30</span></li>
+                                    <li>Kids 2: <span class="highlight">19h30 às 20h30</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">🧑 Juvenil (13 a 16 anos)</h4>
+                                <p>Terça e quinta</p>
+                                <ul class="list-disc list-inside mt-1 text-xl">
+                                    <li><span class="highlight">19h às 20h</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">👨‍🦱 Adultos</h4>
+                                <p>De segunda a sexta</p>
+                                <ul class="list-disc list-inside mt-1 text-xl">
+                                    <li><span class="highlight">20h30 às 22h</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Sábado</h4>
+                                <ul class="list-disc list-inside mt-1 text-xl">
+                                    <li><span class="highlight">16:00 – Adulto</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center space-y-4">
+                        <h3 class="list-item-title mb-4">Mensalidades 💰</h3>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <p class="text-md font-bold text-white">Adultos</p>
+                            <p class="text-lg font-bold highlight">R$ 85,00</p>
+                        </div>
+                        <div class="p-4 bg-gray-800 rounded-lg">
+                            <p class="text-md font-bold text-white">Crianças e Juvenil</p>
+                            <p class="text-lg font-bold highlight">R$ 70,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="mb-16">
-            <div class="card p-8">
-                <h2 class="section-title text-center">Benefícios do Jiu-Jitsu</h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl list-none text-left">
-                    <li class="flex items-center space-x-3">
-                        <span class="text-3xl highlight">🛡️</span>
-                        <div>
-                            <h3 class="list-item-title">Autodefesa</h3>
-                            <p class="list-item-text">Aprenda técnicas eficazes para se proteger em qualquer situação.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span class="text-3xl highlight">💪</span>
-                        <div>
-                            <h3 class="list-item-title">Condicionamento Físico</h3>
-                            <p class="list-item-text">Melhora a força, a flexibilidade e a resistência cardiovascular.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span class="text-3xl highlight">🧠</span>
-                        <div>
-                            <h3 class="list-item-title">Saúde Mental</h3>
-                            <p class="list-item-text">Reduz o estresse e a ansiedade, promovendo clareza mental.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3">
-                        <span class="text-3xl highlight">🤝</span>
-                        <div>
-                            <h3 class="list-item-title">Disciplina e Respeito</h3>
-                            <p class="list-item-text">Uma filosofia de vida que constrói caráter e valores fortes.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <section class="mb-16">
+            <div class="card p-8">
+                <h2 class="section-title text-center">Benefícios do Jiu-Jitsu</h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl list-none text-left">
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl highlight">🛡️</span>
+                        <div>
+                            <h3 class="list-item-title">Autodefesa</h3>
+                            <p class="list-item-text">Aprenda técnicas eficazes para se proteger em qualquer situação.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl highlight">💪</span>
+                        <div>
+                            <h3 class="list-item-title">Condicionamento Físico</h3>
+                            <p class="list-item-text">Melhora a força, a flexibilidade e a resistência cardiovascular.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl highlight">🧠</span>
+                        <div>
+                            <h3 class="list-item-title">Saúde Mental</h3>
+                            <p class="list-item-text">Reduz o estresse e a ansiedade, promovendo clareza mental.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <span class="text-3xl highlight">🤝</span>
+                        <div>
+                            <h3 class="list-item-title">Disciplina e Respeito</h3>
+                            <p class="list-item-text">Uma filosofia de vida que constrói caráter e valores fortes.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-        <section class="text-center">
-            <h2 class="text-3xl font-bold mb-4">Pronto para começar?</h2>
-            <p class="text-xl text-gray-400 mb-8">Venha fazer parte da nossa família no tatame.</p>
-            <div class="text-lg text-gray-300">
-                <p class="mb-2">📍 **Endereço:** Rua Padre Diogo Rodrigues, 475</p>
-                <p class="mb-2">📱 **(81) 98580-0823**</p>
-                <p class="mb-2">📸 **@Lucas_Allbuquerque__**</p>
-            </div>
-            <div class="mt-8">
-                <button class="cta-button" onclick="showModal()">Agende sua Aula Experimental!</button>
-            </div>
-        </section>
-        
-        <div class="mt-12 text-center">
-            <h3 class="text-xl font-bold text-white">Professor: Sansão</h3>
-        </div>
+        <section class="text-center">
+            <h2 class="text-3xl font-bold mb-4">Pronto para começar?</h2>
+            <p class="text-xl text-gray-400 mb-8">Venha fazer parte da nossa família no tatame.</p>
+            <div class="text-lg text-gray-300">
+                <p class="mb-2">📍 **Endereço:** Rua Padre Diogo Rodrigues, 475</p>
+                <p class="mb-2">📱 **(81) 98580-0823**</p>
+                <p class="mb-2">📸 **@Lucas_Allbuquerque__**</p>
+            </div>
+            <div class="mt-8">
+                <button class="cta-button" onclick="showModal()">Agende sua Aula Experimental!</button>
+            </div>
+        </section>
+        
+        <div class="mt-12 text-center">
+            <h3 class="text-xl font-bold text-white">Professor: Sansão</h3>
+        </div>
 
-    </div>
+    </div>
 
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h3 class="text-2xl font-bold mb-4">Vamos conversar!</h3>
-            <p class="text-lg text-gray-300 mb-6">Fale conosco pelo WhatsApp ou Instagram para agendar uma aula experimental e tirar todas as suas dúvidas.</p>
-            <p class="text-lg text-gray-300">📱 **(81) 98580-0823**</p>
-            <p class="text-lg text-gray-300">📸 **@Lucas_Allbuquerque__**</p>
-        </div>
-    </div>
-    
-    <div id="open-chat-btn" class="fixed right-4 bottom-4 cursor-pointer z-50">
-        <button class="bg-yellow-500 text-black p-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-            </svg>
-        </button>
-    </div>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 class="text-2xl font-bold mb-4">Vamos conversar!</h3>
+            <p class="text-lg text-gray-300 mb-6">Fale conosco pelo WhatsApp ou Instagram para agendar uma aula experimental e tirar todas as suas dúvidas.</p>
+            <p class="text-lg text-gray-300">📱 **(81) 98580-0823**</p>
+            <p class="text-lg text-gray-300">📸 **@Lucas_Allbuquerque__**</p>
+        </div>
+    </div>
+    
+    <div id="open-chat-btn" class="fixed right-4 bottom-4 cursor-pointer z-50">
+        <button class="bg-yellow-500 text-black p-4 rounded-full shadow-lg hover:bg-yellow-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+            </svg>
+        </button>
+    </div>
 
-    <div id="chat-container" class="fixed right-4 bottom-24 w-11/12 max-w-sm md:max-w-md bg-gray-800 rounded-2xl shadow-xl flex-col overflow-hidden transform scale-95 md:scale-100 hidden">
-        <div class="bg-yellow-500 text-black p-4 rounded-t-2xl flex justify-between items-center">
-            <h3 class="text-lg font-bold">Assistente da Sansão Fight Team ✨</h3>
-            <button id="close-chat-btn" class="text-xl font-bold text-black">&times;</button>
-        </div>
-        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm max-h-80 md:max-h-96 bg-gray-900">
-            <div class="flex justify-start">
-                <div class="bg-gray-700 text-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-lg max-w-[80%]">
-                    E aí! Sou o assistente virtual da Sansão Fight Team. Em que posso te ajudar hoje?
-                </div>
-            </div>
-        </div>
-        <div class="p-4 border-t border-gray-700 flex items-center gap-2 bg-gray-900">
-            <input type="text" id="user-input" placeholder="Digite sua pergunta..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
-            <button id="send-btn" class="bg-yellow-500 text-black p-3 rounded-full hover:bg-yellow-600 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                </svg>
-            </button>
-        </div>
-    </div>
+    <div id="chat-container" class="fixed right-4 bottom-24 w-11/12 max-w-sm md:max-w-md bg-gray-800 rounded-2xl shadow-xl flex-col overflow-hidden transform scale-95 md:scale-100 hidden">
+        <div class="bg-yellow-500 text-black p-4 rounded-t-2xl flex justify-between items-center">
+            <h3 class="text-lg font-bold">Assistente da Sansão Fight Team ✨</h3>
+            <button id="close-chat-btn" class="text-xl font-bold text-black">&times;</button>
+        </div>
+        <div id="chat-box" class="flex-1 p-4 overflow-y-auto space-y-4 text-sm max-h-80 md:max-h-96 bg-gray-900">
+            <div class="flex justify-start">
+                <div class="bg-gray-700 text-white p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-lg max-w-[80%]">
+                    E aí! Sou o assistente virtual da Sansão Fight Team. Em que posso te ajudar hoje?
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t border-gray-700 flex items-center gap-2 bg-gray-900">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta..." class="flex-1 p-3 rounded-xl bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+            <button id="send-btn" class="bg-yellow-500 text-black p-3 rounded-full hover:bg-yellow-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                </svg>
+            </button>
+        </div>
+    </div>
 
-    <script>
-        // Funções para o Modal de Contato
-        function showModal() {
-            document.getElementById('contactModal').style.display = 'flex';
-        }
+    <script>
+        // Funções para o Modal de Contato
+        function showModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
 
-        function closeModal() {
-            document.getElementById('contactModal').style.display = 'none';
-        }
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
 
-        window.onclick = function(event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-        
-        // Funções para o Chatbot
-        const openChatBtn = document.getElementById('open-chat-btn');
-        const userInput = document.getElementById('user-input');
-        const sendBtn = document.getElementById('send-btn');
-        const chatBox = document.getElementById('chat-box');
-        const chatContainer = document.getElementById('chat-container');
-        const closeChatBtn = document.getElementById('close-chat-btn');
-        const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
-        const apiKey = 'AIzaSyDWxQx6cgYMr3AjAQsgA4mMswmwX_NOE3U'; // <<--- SUA CHAVE DE API FOI INSERIDA AQUI
-        
-        // As instruções para o chatbot foram melhoradas para uma conversa mais fluida
-        let chatHistory = [{
-            role: 'user',
-            parts: [{ text: `Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é responder às perguntas dos visitantes de forma direta, amigável e como uma pessoa conversando. Use as seguintes informações: Horários: Crianças (Segunda, quarta e sexta, Kids 1: 18:30-19:30, Kids 2: 19:30-20:30), Juvenil (Terça e quinta, 19:00-20:00), Adultos (Segunda a sexta, 20:30-22:00) e Sábado (16:00). Mensalidades: Adultos R$ 85,00 e Crianças/Juvenil R$ 70,00. Endereço: Rua Padre Diogo Rodrigues, 475. Não use o nome do professor, apenas fale sobre a academia e os treinos.` }]
-        }];
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Funções para o Chatbot
+        const openChatBtn = document.getElementById('open-chat-btn');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const chatBox = document.getElementById('chat-box');
+        const chatContainer = document.getElementById('chat-container');
+        const closeChatBtn = document.getElementById('close-chat-btn');
+        const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
+        const apiKey = 'AIzaSyDWxQx6cgYMr3AjAQsgA4mMswmwX_NOE3U'; // <<--- SUA CHAVE DE API FOI INSERIDA AQUI
+        
+        // As instruções para o chatbot foram melhoradas para uma conversa mais fluida
+        let chatHistory = [{
+            role: 'user',
+            parts: [{ text: `Você é o assistente virtual da Academia Sansão Fight Team. Sua missão é responder às perguntas dos visitantes de forma direta, amigável e como uma pessoa conversando. Use as seguintes informações: Horários: Crianças (Segunda, quarta e sexta, Kids 1: 18:30-19:30, Kids 2: 19:30-20:30), Juvenil (Terça e quinta, 19:00-20:00), Adultos (Segunda a sexta, 20:30-22:00) e Sábado (16:00). Mensalidades: Adultos R$ 85,00 e Crianças/Juvenil R$ 70,00. Endereço: Rua Padre Diogo Rodrigues, 475. Não use o nome do professor, apenas fale sobre a academia e os treinos.` }]
+        }];
 
-        // Inicialmente o chat está oculto
-        chatContainer.classList.add('hidden');
+        // Inicialmente o chat está oculto
+        chatContainer.classList.add('hidden');
 
-        function showMessage(text, sender) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
-            messageDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg max-w-[80%] ${sender === 'user' ? 'bg-yellow-500 text-black rounded-tr-xl rounded-bl-xl rounded-tl-xl' : 'bg-gray-700 text-white rounded-tr-xl rounded-bl-xl rounded-br-xl'}">${text}</div>`;
-            chatBox.appendChild(messageDiv);
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }
-        
-        openChatBtn.addEventListener('click', () => {
-            chatContainer.classList.remove('hidden');
-            chatContainer.classList.add('flex');
-            openChatBtn.style.display = 'none';
-        });
+        function showMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+            messageDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg max-w-[80%] ${sender === 'user' ? 'bg-yellow-500 text-black rounded-tr-xl rounded-bl-xl rounded-tl-xl' : 'bg-gray-700 text-white rounded-tr-xl rounded-bl-xl rounded-br-xl'}">${text}</div>`;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        
+        openChatBtn.addEventListener('click', () => {
+            chatContainer.classList.remove('hidden');
+            chatContainer.classList.add('flex');
+            openChatBtn.style.display = 'none';
+        });
 
-        closeChatBtn.addEventListener('click', () => {
-            chatContainer.classList.remove('flex');
-            chatContainer.classList.add('hidden');
-            openChatBtn.style.display = 'block';
-        });
+        closeChatBtn.addEventListener('click', () => {
+            chatContainer.classList.remove('flex');
+            chatContainer.classList.add('hidden');
+            openChatBtn.style.display = 'block';
+        });
 
-        async function sendMessage() {
-            const userText = userInput.value.trim();
-            if (userText === '') return;
+        async function sendMessage() {
+            const userText = userInput.value.trim();
+            if (userText === '') return;
 
-            showMessage(userText, 'user');
-            userInput.value = '';
-            
-            chatHistory.push({ role: 'user', parts: [{ text: userText }] });
+            showMessage(userText, 'user');
+            userInput.value = '';
+            
+            chatHistory.push({ role: 'user', parts: [{ text: userText }] });
 
-            const loadingDiv = document.createElement('div');
-            loadingDiv.id = 'loading-indicator';
-            loadingDiv.className = 'flex justify-start';
-            loadingDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg bg-gray-700 max-w-[80%]">Pensando...</div>`;
-            chatBox.appendChild(loadingDiv);
-            chatBox.scrollTop = chatBox.scrollHeight;
-            
-            const payload = {
-                contents: chatHistory,
-                tools: [{ "google_search": {} }],
-                systemInstruction: {
-                    parts: [{ text: chatHistory[0].parts[0].text }]
-                }
-            };
-            
-            try {
-                const response = await fetch(API_URL + apiKey, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                
-                const result = await response.json();
-                const candidate = result.candidates?.[0];
-                let botMessage = "Desculpe, não consegui gerar uma resposta. Tente novamente.";
-                
-                if (candidate && candidate.content && candidate.content.parts && candidate.content.parts.length > 0) {
-                    botMessage = candidate.content.parts[0].text;
-                }
-                
-                document.getElementById('loading-indicator').remove();
-                showMessage(botMessage, 'bot');
-                chatHistory.push({ role: 'model', parts: [{ text: botMessage }] });
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loading-indicator';
+            loadingDiv.className = 'flex justify-start';
+            loadingDiv.innerHTML = `<div class="p-3 rounded-xl shadow-lg bg-gray-700 max-w-[80%]">Pensando...</div>`;
+            chatBox.appendChild(loadingDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+            
+            const payload = {
+                contents: chatHistory,
+                tools: [{ "google_search": {} }],
+                systemInstruction: {
+                    parts: [{ text: chatHistory[0].parts[0].text }]
+                }
+            };
+            
+            try {
+                const response = await fetch(API_URL + apiKey, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+                let botMessage = "Desculpe, não consegui gerar uma resposta. Tente novamente.";
+                
+                if (candidate && candidate.content && candidate.content.parts && candidate.content.parts.length > 0) {
+                    botMessage = candidate.content.parts[0].text;
+                }
+                
+                document.getElementById('loading-indicator').remove();
+                showMessage(botMessage, 'bot');
+                chatHistory.push({ role: 'model', parts: [{ text: botMessage }] });
 
-            } catch (error) {
-                console.error("Erro ao chamar a API Gemini:", error);
-                document.getElementById('loading-indicator').remove();
-                showMessage("Ops, algo deu errado. Tente de novo.", 'bot');
-            }
-        }
+            } catch (error) {
+                console.error("Erro ao chamar a API Gemini:", error);
+                showMessage("Ops, algo deu errado. Tente de novo.", 'bot');
+            }
+        }
 
-        sendBtn.addEventListener('click', sendMessage);
-        userInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-    </script>
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </body>
 </html>
